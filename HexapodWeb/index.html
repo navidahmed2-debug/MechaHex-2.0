@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/software-agent.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexapod Project</title>
+    <link rel="stylesheet" href="Hex.css">
+
+    <!-- Google tag (gtag.js)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8N9Y7VPRE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E8N9Y7VPRE');
+    </script>  -->
+
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button id="menu-toggle" onclick="toggleSidebar()">☰</button>
+    
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <!-- Close Button in Sidebar -->
+        <button id="close-btn" onclick="toggleSidebar()">✖</button>
+        <ul>
+            <li><a href="#home" onclick="toggleSidebar()">Home</a></li>
+            <li><a href="#about" onclick="toggleSidebar()">About</a></li>
+            <li><a href="#features" onclick="toggleSidebar()">Features</a></li>
+            <li><a href="#journey" onclick="toggleSidebar()">Journey</a></li>
+            <li><a href="#code" onclick="toggleSidebar()">Code Repository</a></li>
+            <li><a href="#media" onclick="toggleSidebar()">Gallery</a></li>
+            <li><a href="#future-plans" onclick="toggleSidebar()">Future Plans</a></li>
+        </ul>
+    </div>
+    
+    <!-- Overlay to Close Sidebar When Clicked Outside -->
+    <div id="overlay" onclick="toggleSidebar()"></div>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#code">Code Repository</a></li>
+            <li><a href="#media">Gallery</a></li>
+            <li><a href="#future-plans">Future Plans</a></li>
+        </ul>
+    </nav>
+    <!-- Header Section -->
+    <header id="home">
+        <h1>Mecha</h1>
+        <h2>Hex</h2>
+        <p>A journey into Robotics and Engineering</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About our Project</h2>
+        <p>Welcome to our Hexapod Robot Project! Inspired by the agile movement of insects,
+             this six-legged robot is engineered for stability and adaptability on various terrains. 
+             Building it has been an exciting journey, letting us dive into areas like servo control, real-time video streaming, 
+             and sensor integration. Equipped with a live-feed camera and environmental sensors, our hexapod serves as both a 
+             research platform and a showcase of modern robotics. 
+             <br><br>This project is always evolving, blending technology, creativity, and problem-solving. 
+             It’s more than just a machine—it’s a leap toward the future of robotics.</p>
+            <br>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/S6IN6HmjT4M" frameborder="0" allowfullscreen></iframe>
+            </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>20 Servo Motors for Leg and Camera Movement</li>
+            <li>Live Video Streaming</li>
+            <li>Environmental Sensors (DHT11 & MQ2)</li>
+        </ul>
+    </section>
+
+    <!-- Project Journey Section -->
+    <section id="journey">
+        <h2>Project Goal</h2>
+        <p>Our goal is to create a semi-autonomous robot that navigates and adapts to its environment, 
+            with future applications in exploration, search and rescue, and remote inspections. In the near term, 
+            we’re focusing on refining its walking and turning, enhancing video streaming, and improving sensor accuracy.
+            <br><br>
+            Looking forward, we plan to integrate AI for facial and object recognition, allowing the hexapod to recognize and 
+            interact with its surroundings. This will transform it from a research tool into an autonomous explorer, capable of 
+            assisting in hands-free, real-world applications.
+            </p>
+    </section>
+
+    <!-- Code Repository Section -->
+    <section id="code">
+        <h2>Code Repository</h2>
+        <a href="https://github.com/Electro121/Hexapod">View on GitHub</a>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2>Gallery</h2>
+        <p>Photos and videos of the hexapod in action.</p>
+        <br>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/7pWN_-L_7Zs" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+
+    <!-- Future Plans Section -->
+    <section id="future-plans">
+        <h2>Future Plans</h2>
+        <ul>
+            <li>Implementing ROS2 with Raspberry Pi</li>
+            <li>Adding additional sensors with LIDER and GPS for better navigation and mapping</li>
+            <li>Implementing AI-based pathfinding and obstacle avoidance</li>
+            <li>Utilizing mesh networking for an extended range in large disaster areas</li>
+            <li>Coordinating multiple robots for comprehensive area coverage</li>
+        </ul>
+    </section>
+
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Our Team Members</h2>
+        <p>The creators behind MechaHex</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/Zuhayer.jpg" alt="Zuhayer Mahtab">
+                <h3>Zuhayer Mahtab</h3>
+                <p>Software and Electronics Lead</p>
+            </div>
+            <div class="team-member">
+                <img src="images/Ziya.jpg" alt="Ziya Mohammad Sayef Ullah">
+                <h3>Ziya Mohammad Sayef Ullah</h3>
+                <p>Mechanical & Design Lead</p>
+            </div>
+            <div class="team-member">
+                <img src="images/Mughdo.jpeg" alt="Md. Tasneemul Hassan">
+                <h3>Md. Tasneemul Hassan</h3>
+                <p>Editorial & Publications Lead</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <!--<p>&copy; MechaHex. All rights reserved.</p>-->
+        <p>Contact me on <a href="https://www.linkedin.com/in/zuhayer-mahtab-aa1973254/">LinkedIn</a> or <a href="https://github.com/Electro121">GitHub</a></p>
+    </footer>
+    <script>
+        function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const menuToggle = document.getElementById("menu-toggle");
+
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+        // Hide the sidebar icon when sidebar is active
+        if (sidebar.classList.contains("active")) {
+            menuToggle.style.display = "none";
+        } else {
+            menuToggle.style.display = "block";
+         }
+        }
+    </script>
+</body>
+</html>
