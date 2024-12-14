@@ -1,8 +1,8 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <NewPing.h>
-//Analog 4 -> SDA   komola
-//Analog 5 -> SCL   holud
+//Analog 4 -> SDA
+//Analog 5 -> SCL
 //CH1--3
 //CH3--2
 //CH4--4
@@ -63,11 +63,20 @@ void movePanTilt(int panPos, int tiltPos) {
 
 void moveLegInit() {
   for (int i = 0; i < 3; i++) {
-    moveLeg(pwm1, i, 375, 375, 375);    //150, 600    345, 370
+    moveLeg(pwm1, i, 375, 345, 370);    //150, 600    345, 370
   }
 }
 
 void moveLegTInit() {
+  for (int i = 0; i < 3; i++) {
+    moveLegT(pwm2, i, 375, 407, 420);   //600, 150    407, 420
+  }
+}
+
+void Minit() {
+  for (int i = 0; i < 3; i++) {
+    moveLeg(pwm1, i, 375, 375, 375);    //150, 600    345, 370
+  }
   for (int i = 0; i < 3; i++) {
     moveLegT(pwm2, i, 375, 375, 375);   //600, 150    407, 420
   }
@@ -95,8 +104,9 @@ void setup() {
   pinMode(ch2Pin, INPUT);
   pinMode(ch3Pin, INPUT);
 
-  moveLegInit();
-  moveLegTInit();
+  //moveLegInit();
+  //moveLegTInit();
+  Minit();
 
   movePanTilt(375, 375);
   delay(3000);
@@ -224,7 +234,7 @@ void Avoid_Obstracle() {
   int distanceRight = 0;
   int distanceLeft = 0;
   delay(50);
-  if (distance <= 20){
+  if (distance <= 25){
     moveLegInit();
     moveLegTInit();
     delay(300);
